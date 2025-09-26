@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const connectDB = require('./database/database.js');
+const connectDB = require('./database/database');
 const userRoutes = require('./routes/routes');
 const { urlencoded } = require('body-parser');
 
@@ -21,6 +21,10 @@ app.use('/', userRoutes);
 
 // Connect to MongoDB
 connectDB();
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);

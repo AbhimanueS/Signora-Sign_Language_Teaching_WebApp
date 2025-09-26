@@ -1,51 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
-  <link rel="stylesheet" href="login.css"/>
+  <link rel="stylesheet" href="login.css" />
 </head>
+
 <body>
   <div class="container">
     <div class="top"></div>
     <div class="bottom"></div>
     <div class="center">
       <h2>Please Sign In</h2>
-      <form id="loginForm">
+      <form method="post" action="/login">
         <input type="email" placeholder="Email" name="email" id="email" required />
         <input type="password" placeholder="Password" name="password" id="password" required />
+        <label class="show-password">
+          <input type="checkbox" onclick="togglePasswordVisibility()"> Show Password
+        </label>
+
         <button type="submit">Login</button>
+        <a href="registration.html">
+          <button type="button">Register</button>
       </form>
     </div>
   </div>
-
   <script>
-    const form = document.getElementById("loginForm");
+    function togglePasswordVisibility() {
+      const passwordField = document.getElementById("password");
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
 
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-
-      const response = await fetch("/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams({ email, password }),
-      });
-
-      const text = await response.text();
-
-      if (response.ok) {
-        alert("Login successful!");
-        
-      } else {
-        alert(text); 
-      }
-    });
+      // Toggle type for both fields
+      const type = passwordField.type === "password" ? "text" : "password";
+      passwordField.type = type;
+      confirmPasswordField.type = type;
+    }
   </script>
 </body>
+
 </html>
