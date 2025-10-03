@@ -59,27 +59,27 @@ router.post('/login', async (req, res) => {
 const alphabetData = {
     'A': {
         letter: 'A',
-        imageUrl: '/videos/Assign.mp4', // You'll need to create an images folder
+        imageUrl: '/videos/Avid.mp4', // You'll need to create an images folder
         description: 'To sign the letter A, make a fist with your thumb placed on the side of your index finger.'
     },
     'B': {
         letter: 'B',
-        imageUrl: '/images/sign_B.png',
+        imageUrl: '/videos/Bvid.mp4',
         description: 'To sign the letter B, hold your hand up with your four fingers together and your thumb tucked across your palm.'
     },
     'C': {
         letter: 'C',
-        imageUrl: '/images/sign_C.png',
+        imageUrl: '/videos/Cvid.mp4',
         description: 'To sign the letter C, curve your fingers and thumb to form the shape of the letter C.'
     },
     'D': {
         letter: 'D',
-        imageUrl: '/images/sign_D.png',
+        imageUrl: '/videos/Dvid.mp4',
         description: 'To sign the letter D, extend your index finger straight up and touch the tips of your other three fingers to your thumb.'
     },
     'E': {
         letter: 'E',
-        imageUrl: '/images/sign_E.png',
+        imageUrl: '/videos/Evid.mp4',
         description: 'To sign the letter E, bend your four fingers down to touch your palm, with your thumb tucked in closely.'
     }
   

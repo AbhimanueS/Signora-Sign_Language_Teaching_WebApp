@@ -5,10 +5,6 @@ const userRoutes = require('./routes/routes');
 const { urlencoded } = require('body-parser');
 
 const app = express();
-/*app.use((req, res, next) => {
-    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
-    next();
-});*/
 
 const PORT = 3000;
 
