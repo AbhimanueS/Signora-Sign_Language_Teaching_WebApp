@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&family=Lexend%3Awght%40400%3B500%3B700%3B900&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <title>Learn: <%= alphabet.letter %> - Signora</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+</head>
+<body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+        <div class="layout-container flex h-full grow flex-col">
+            
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f3f4] px-10 py-3">
+                <div class="flex items-center gap-4 text-[#111518]">
+                    <div class="size-4">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z" fill="currentColor"></path></svg>
+                    </div>
+                    <h2 class="text-[#111518] text-lg font-bold leading-tight tracking-[-0.015em]">Signora</h2>
+                </div>
+                <div class="flex flex-1 justify-end gap-8">
+                    <div class="flex items-center gap-9">
+                        <a class="text-[#111518] text-sm font-medium leading-normal" href="/home.html">Home</a>
+                        
+                    </div>
+                    <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#f0f3f4] text-[#111518] text-sm font-bold leading-normal tracking-[0.015em]">
+                        <span class="truncate">Profile</span>
+                    </button>
+                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWe8VJfSudkc_2SiOgz9owvMgMCoEPrxnFUJRgeSwgyKGCz15ec-8Oi6k5rQhAgQ2yYIOOp93OvWy3qwEnQxKav1K_hSPWQDZ1AgbJf60jAMBX1ZUHONOpTUVBqD5CmMY7azxUfJtlYEZfLo9qTfm2WpV9U0xDlG-zU-7zN-H-bDShkt8MOj7Gvo1-8FzD4GPPbda4nbkdNMXAzM9bK_6N6DYKz__Xl643KHPOuUPh_lMCRe3Wn-ZEMOCAh-4a3x-SL9o1BSn-Oa0");'></div>
+                </div>
+            </header>
+
+            <main class="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-10">
+                <div class="layout-content-container flex flex-col items-center max-w-[960px] flex-1">
+                    
+                    <div class="text-center mb-8">
+                        <p class="text-[#111518] tracking-light text-[32px] font-bold leading-tight">
+                            Learn the Sign for Letter: <span class="text-indigo-600"><%= alphabet.letter %></span>
+                        </p>
+                    </div>
+                    
+                    <div class="w-full max-w-lg flex flex-col items-center gap-6 rounded-xl border border-[#dce2e5] bg-white p-8 shadow-sm">
+                        
+                        <video autoplay loop muted playsinline>
+                            <source src="<%= alphabet.imageUrl %>" type="video/mp4" />
+                        </video>
+
+                        <p class="text-[#111518] text-lg text-center leading-relaxed">
+                            <%= alphabet.description %>
+                        </p>
+                    </div>
+
+                    <a href="/home.html" class="mt-10 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-5 bg-[#f0f3f4] text-[#111518] text-sm font-bold leading-normal tracking-[0.015em] no-underline hover:bg-[#dce2e5] transition-colors">
+                        <span class="truncate">Back to All Lessons</span>
+                    </a>
+
+                </div>
+            </main>
+
+        </div>
+    </div>
+</body>
+</html>

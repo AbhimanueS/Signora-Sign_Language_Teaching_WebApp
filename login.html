@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="center">
+      <h2>Please Sign In</h2>
+      <form method="post" action="/login">
+        <input type="email" placeholder="Email" name="email" id="email" required />
+        <input type="password" placeholder="Password" name="password" id="password" required />
+        <label class="show-password">
+          <input type="checkbox" onclick="togglePasswordVisibility()"> Show Password
+        </label>
+
+        <button type="submit">Login</button>
+        <a href="registration.html">
+          <button type="button">Register</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    function togglePasswordVisibility() {
+      const passwordField = document.getElementById("password");
+
+
+      // Toggle type for both fields
+      const type = passwordField.type === "password" ? "text" : "password";
+      passwordField.type = type;
+      confirmPasswordField.type = type;
+    }
+  </script>
+</body>
+
+</html>

@@ -154,7 +154,7 @@ nav {
 
 .nav-right li a:hover {
   background: rgba(255, 255, 255, 0.2);
-  color: #f4b005;
+  color: #ffda79;
 }
 
 
@@ -189,7 +189,6 @@ section h2 {
   min-height: 60vh;
   background: rgb(239, 170, 7);
   color: #333;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
