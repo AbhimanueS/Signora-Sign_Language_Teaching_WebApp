@@ -1,6 +1,6 @@
-// routes.js
 const express = require('express');
 const User = require('../model/model');
+const bcrypt = require('bcryptjs'); // <-- 1. Import bcrypt
 
 const router = express.Router();
 
@@ -12,10 +12,15 @@ router.post("/register", async(req, res) => {
             return res.status(400).send('User with this email already exists. <a href="/register">Try again</a>.');
         }
         
+        // --- 2. HASH THE PASSWORD ---
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(req.body.password, salt);
+        // --- End of hashing ---
+        
         const newUser = new User({
             name: req.body.name,
             email: req.body.email,
-            password: req.body.password 
+            password: hashedPassword // <-- 3. Save the HASHED password
         });
         await newUser.save();
         res.redirect('/login');
@@ -33,12 +38,19 @@ router.post('/login', async (req, res) => {
         if (!user) {
             return res.status(400).send('User not found. <a href="/login">Try again</a>.');
         }
-        if (user.password !== password) {
+
+        // --- 4. COMPARE THE HASHED PASSWORD ---
+        // Use bcrypt.compare to check the plain-text password from the form
+        // against the hashed password in the database.
+        const isMatch = await bcrypt.compare(password, user.password);
+
+        if (!isMatch) {
+            // Passwords don't match
             return res.status(401).send('Invalid credentials. <a href="/login">Try again</a>.');
         }
+        // --- End of comparison ---
         
-        // *** THIS IS THE CHANGE ***
-        // Redirect to /app instead of /
+        // Redirect to /app (This was your original, correct redirect)
         res.redirect("/app"); 
 
     } catch (error) {
@@ -48,3 +60,4 @@ router.post('/login', async (req, res) => {
 });
 
 module.exports = router;
+
