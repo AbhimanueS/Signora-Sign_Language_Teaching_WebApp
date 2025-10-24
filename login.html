@@ -5,7 +5,174 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
-  <link rel="stylesheet" href="login.css" />
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Raleway', sans-serif;
+      background-color: #3745b5; /* Fallback background */
+    }
+
+    .container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* This container:hover logic makes the animation start on mouse-over */
+    .container:hover .top:before,
+    .container:hover .top:after,
+    .container:hover .bottom:before,
+    .container:hover .bottom:after,
+    .container:active .top:before,
+    .container:active .top:after,
+    .container:active .bottom:before,
+    .container:active .bottom:after {
+      margin-left: 200px;
+      transform-origin: -200px 50%;
+      transition-delay: 0s;
+    }
+
+    .container:hover .center,
+    .container:active .center {
+      opacity: 1;
+      transition-delay: 0.2s;
+    }
+
+    .top:before, .top:after,
+    .bottom:before, .bottom:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 200vmax;
+      height: 200vmax;
+      top: 50%;
+      left: 50%;
+      margin-top: -100vmax;
+      transform-origin: 0 50%;
+      transition: all 0.5s cubic-bezier(0.445, 0.05, 0, 1);
+      z-index: 10;
+      opacity: 0.65;
+      transition-delay: 0.2s;
+    }
+
+    .top:before {
+      transform: rotate(45deg);
+      background: #e46569;
+    }
+    .top:after {
+      transform: rotate(135deg);
+      background: #ecaf81;
+    }
+
+    .bottom:before {
+      transform: rotate(-45deg);
+      background: #60b8d4;
+    }
+    .bottom:after {
+      transform: rotate(-135deg);
+      background: #3745b5;
+    }
+
+    .center {
+      position: absolute;
+      width: 400px;
+      /* Height is auto to fit content */
+      height: auto; 
+      top: 50%;
+      left: 50%;
+      /* Corrected centering from original CSS */
+      transform: translate(-50%, -50%); 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.445, 0.05, 0, 1);
+      transition-delay: 0s;
+      color: #333;
+      background: rgba(255, 255, 255, 0.9); /* Made slightly transparent */
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      z-index: 20; /* Ensure form is on top */
+    }
+
+    .center h2 {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .center input[type="email"],
+    .center input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px;
+      border-radius: 4px; /* Softened border radius */
+      border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 16px; /* Added font-size */
+    }
+
+    .show-password {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 5px;
+      font-size: 14px; /* Added for clarity */
+      color: #555; /* Added for clarity */
+    }
+
+    /* This is the key fix: Resets the width from 100% */
+    .show-password input[type="checkbox"] {
+      width: auto;
+      margin: 0 8px 0 5px; /* Added space around checkbox */
+    }
+    
+    /* --- ADDED BUTTON STYLES --- */
+    .center button {
+        width: 100%;
+        padding: 15px;
+        margin: 8px 0;
+        border-radius: 4px;
+        border: none;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .center button[type="submit"] {
+        background-color: #3745b5;
+        color: white;
+    }
+    .center button[type="submit"]:hover {
+        background-color: #2c378f;
+    }
+    
+    .center button[type="button"] {
+        background-color: #e46569;
+        color: white;
+    }
+    .center button[type="button"]:hover {
+        background-color: #c95458;
+    }
+    
+    .center a {
+        text-decoration: none;
+        width: 100%;
+    }
+    /* --- END OF ADDED STYLES --- */
+
+  </style>
 </head>
 
 <body>
@@ -32,11 +199,11 @@
     function togglePasswordVisibility() {
       const passwordField = document.getElementById("password");
 
-
-      // Toggle type for both fields
+      // Toggle type for the password field
       const type = passwordField.type === "password" ? "text" : "password";
       passwordField.type = type;
-      confirmPasswordField.type = type;
+      
+      // Removed the line for 'confirmPasswordField' as it does not exist on this page
     }
   </script>
 </body>

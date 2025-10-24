@@ -82,16 +82,3 @@ body{
     font-family:inherit;
   }
 }
-/* Add these rules to fix the alignment */
-
-.show-password {
-  display: flex;         /* Aligns children (checkbox and text) in a row */
-  align-items: center;   /* Vertically centers the checkbox with the text */
-  width: 100%;         /* Makes the label align with the inputs above */
-  margin: 5px;           /* Matches the margin of your other inputs */
-}
-
-.show-password input[type="checkbox"] {
-  width: auto;           /* This is the key fix: Resets the width from 100% */
-  margin: 0 5px 0 0;     /* Adds a small space between the box and the text */
-}
