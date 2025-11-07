@@ -1,5 +1,3 @@
-// This object will act as your mini-database.
-// Make sure your video files are in the `public/videos/` folder.
 export const alphabetData = {
   A: {
     letter: 'A',
@@ -26,5 +24,40 @@ export const alphabetData = {
     videoUrl: '/videos/Evid.mp4',
     description: 'This is the sign for E. Bend all your fingers in, and rest your thumb across them.',
   },
-  // ... add all other letters here
+
+  yes:
+  {
+    letter: 'Yes',
+    videoUrl: '/videos/Yesvid.mp4',
+    description:'This is the sign for Showing Yes in Sign Language'
+
+  },
+
+  Hello:
+  {
+    letter: 'Hello',
+    videoUrl: '/videos/Hellovid.mp4',
+    description:'This is the sign for Showing hello in ASL Sign Language'
+
+  },
+
+  DontKnow:
+{
+  letter: 'Dont Know',
+  videoUrl: '/videos/DontKnowvid.mp4',
+  description:'This is the sign for Showing Dont know in ASL Sign Language'
+
+},
+
+  Thankyou:
+  {
+    letter: 'Thank you',
+    videoUrl: '/videos/Thankyouvid.mp4',
+    description:'This is the sign for Showing Thankyou in ASL Sign Language'
+
+  },
+
+
+
+
 };

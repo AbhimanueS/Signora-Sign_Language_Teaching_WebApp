@@ -3,19 +3,28 @@ import { useParams, Link } from 'react-router-dom';
 import { alphabetData } from './alphabetData'; // 1. Make sure this file exists
 import { Helmet } from 'react-helmet'; 
 
-// Run: npm install react-helmet
-// (You only need to run this command once)
+
 
 function AlphabetPage() {
   let { letter } = useParams();
-  const alphabet = alphabetData[letter.toUpperCase()];
+
+  // --- MODIFIED LOGIC HERE ---
+  // Try to find the key as-is first (e.g., "Hello", "yes", "DontKnow")
+  let alphabet = alphabetData[letter];
+
+  // If it's not found, then try the uppercase version (for "a", "b", etc.)
+  if (!alphabet) {
+    alphabet = alphabetData[letter.toUpperCase()];
+  }
+  // --- END OF MODIFIED LOGIC ---
+
 
   if (!alphabet) {
     return (
       <main className="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-10">
         <div className="layout-content-container flex flex-col items-center max-w-[960px] flex-1">
           <h1 className="text-2xl font-bold">Sign Not Found</h1>
-          <p className="mt-4">Sorry, we don't have data for the letter "{letter}".</p>
+          <p className="mt-4">Sorry, we don't have data for the sign "{letter}".</p>
           <Link
             to="/"
             className="mt-10 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-5 bg-[#f0f3f4] text-[#111518] text-sm font-bold leading-normal tracking-[0.015em] no-underline hover:bg-[#dce2e5] transition-colors"
@@ -37,7 +46,7 @@ function AlphabetPage() {
         <div className="layout-content-container flex flex-col items-center max-w-[960px] flex-1">
           <div className="text-center mb-8">
             <p className="text-[#111518] tracking-light text-[32px] font-bold leading-tight">
-              Learn the Sign for Letter: <span className="text-indigo-600">{alphabet.letter}</span>
+              Learn the Sign for: <span className="text-indigo-600">{alphabet.letter}</span>
             </p>
           </div>
 

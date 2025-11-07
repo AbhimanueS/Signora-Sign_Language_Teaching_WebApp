@@ -17,15 +17,23 @@ function SignLanguageHome() {
         </h3>
         {/* ... (rest of your Greetings grid) ... */}
         <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-          <div className="flex flex-1 gap-3 rounded-lg border border-[#dce2e5] bg-white p-4 items-center">
-            <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCF5GhFzMZde_vflC4wB32XprwOG_aR6p6hyauOGN45mx3l9wO403e-YOm1Ac7-qoN4OgrJkByOt5gbWspGv555PvtQ6fh8F-m9IAlkz_V0gpR_oz0eQ5Al9nfUD7AFZ8IPibJW9J4OV123ZhXnqeUBZvjSLhiftw3Eo4N--5cS8i4jXIScGtpwXTY3tRywpfFscZX7ZcEHRzbiRLUq3dEM4vnGyPr3T0kp_BnZ0YnPNlORozBNaxlx71uAF8S0kDn4gleoyGujy0k")' }}></div>
-            <h2 className="text-[#111518] text-base font-bold leading-tight">Hello</h2>
-          </div>
+          {/* --- Added Link wrapper here --- */}
+          <Link to="/Hello" className="flex flex-1">
+            <div className="flex flex-1 gap-3 rounded-lg border border-[#dce2e5] bg-white p-4 items-center">
+              <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCF5GhFzMZde_vflC4wB32XprwOG_aR6p6hyauOGN45mx3l9wO403e-YOm1Ac7-qoN4OgrJkByOt5gbWspGv555PvtQ6fh8F-m9IAlkz_V0gpR_oz0eQ5Al9nfUD7AFZ8IPibJW9J4OV123ZhXnqeUBZvjSLhiftw3Eo4N--5cS8i4jXIScGtpwXTY3tRywpfFscZX7ZcEHRzbiRLUq3dEM4vnGyPr3T0kp_BnZ0YnPNlORozBNaxlx71uAF8S0kDn4gleoyGujy0k")' }}></div>
+              <h2 className="text-[#111518] text-base font-bold leading-tight">Hello</h2>
+            </div>
+          </Link>
+          
           {/* ... other greetings ... */}
-          <div className="flex flex-1 gap-3 rounded-lg border border-[#dce2e5] bg-white p-4 items-center">
-            <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrUOaWUll69YrQEeIqUd5I-rAd-74GvT2AEc4dNIU9mBbGzMY9PMJKjWjPgobLuO6g6sDm_Rm9MI2qh5CKW1vllIpUA2TvvdooKyXxEah9KscHqA92wQbXBkpnz4B_n0YZ4GAxBq-vFjBCNDFezheyaMC163a6EW1aeEQBgWNy0Xw7Ani-__b7FQViVh0REzTTqnJbwjGcaGWfVevwFl308dASh_PsdtJp3-ax5NGCBda9zeP51s7KxeEAyAFufLogQxqU52Y-NxA")' }}></div>
-            <h2 className="text-[#111518] text-base font-bold leading-tight">Thank you</h2>
-          </div>
+
+          {/* --- Added Link wrapper here --- */}
+          <Link to="/Thankyou" className="flex flex-1">
+            <div className="flex flex-1 gap-3 rounded-lg border border-[#dce2e5] bg-white p-4 items-center">
+              <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrUOaWUll69YrQEeIqUd5I-rAd-74GvT2AEc4dNIU9mBbGzMY9PMJKjWjPgobLuO6g6sDm_Rm9MI2qh5CKW1vllIpUA2TvvdooKyXxEah9KscHqA92wQbXBkpnz4B_n0YZ4GAxBq-vFjBCNDFezheyaMC163a6EW1aeEQBgWNy0Xw7Ani-__b7FQViVh0REzTTqnJbwjGcaGWfVevwFl308dASh_PsdtJp3-ax5NGCBda9zeP51s7KxeEAyAFufLogQxqU52Y-NxA")' }}></div>
+              <h2 className="text-[#111518] text-base font-bold leading-tight">Thank you</h2>
+            </div>
+          </Link>
         </div>
 
         <h3 className="text-[#1118] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
@@ -68,16 +76,25 @@ function SignLanguageHome() {
           Responses
         </h3>
         {/* ... (rest of your Responses grid) ... */}
+ 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-           <div className="flex flex-1 gap-3 rounded-lg border border-[#dce2e5] bg-white p-4 items-center">
-             <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style={{backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuByDblZXDG9ZpiMTpkLvg-_unAT7K5m1pLon2u9xRsf-XPptg8flsCO5rfvQuMYI1Qs-EcNRIVmdcImdIrQGg5roo8S36VBP-NbL42SrLoQPI1tc7K4axXWpS5goT8YgJ1xvOJcg09Y80Q-S0TL_46cirbMvoz3CkD8R8KX8eRZuI5fzwXDWXI91hZjt66H5o75au24GQjml4BnqsKIbGxfnm0kaR-opxmUoQOoTBAuF_W2m2HEeXcO1GMsoIUNjL8l8bQSnvSCBuw")'}}></div>
-             <h2 className="text-[#111518] text-base font-bold leading-tight">Yes</h2>
-           </div>
+           {/* --- Added Link wrapper here --- */}
+           <Link to="/yes" className="flex flex-1">
+            <div className="flex flex-1 gap-3 rounded-lg border border-[#dce2e5] bg-white p-4 items-center">
+              <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style={{backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuByDblZXDG9ZpiMTpkLvg-_unAT7K5m1pLon2u9xRsf-XPptg8flsCO5rfvQuMYI1Qs-EcNRIVmdcImdIrQGg5roo8S36VBP-NbL42SrLoQPI1tc7K4axXWpS5goT8YgJ1xvOJcg09Y80Q-S0TL_46cirbMvoz3CkD8R8KX8eRZuI5fzwXDWXI91hZjt66H5o75au24GQjml4BnqsKIbGxfnm0kaR-opxmUoQOoTBAuF_W2m2HEeXcO1GMsoIUNjL8l8bQSnvSCBuw")'}}></div>
+              <h2 className="text-[#111518] text-base font-bold leading-tight">Yes</h2>
+            </div>
+           </Link>
+
            {/* ... other responses ... */}
-           <div className="flex flex-1 gap-3 rounded-lg border border-[#dce2e5] bg-white p-4 items-center">
-             <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style={{backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtF4EXb2xokQI35zxYNCMSIaF1IHOl0zu7AVz42BymmUnVaIXbRhtpSbKGrzvy407vm1wQVvYqAp4t0WAqa5rj4IQy0ZlDHhTUslRqaAEZItD5GY7ot7XLjJbJdYAekT0SqInJNV5vr-HQYPqsxn2MQsHyngBWsJxB0VkJ-D8IWSEwg2lBY_2tbTYXcHkHg9_Gb4P5-HeaUrsBO1e7O7HuK84zri0ttkc5JmGHW0M2qZTw4OWwRNgSLH_Xv31CPAgOm3WT4h5uNBk")'}}></div>
-             <h2 className="text-[#111518] text-base font-bold leading-tight">I don't know</h2>
-           </div>
+
+           {/* --- Added Link wrapper here --- */}
+           <Link to="/DontKnow" className="flex flex-1">
+            <div className="flex flex-1 gap-3 rounded-lg border border-[#dce2e5] bg-white p-4 items-center">
+              <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style={{backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtF4EXb2xokQI35zxYNCMSIaF1IHOl0zu7AVz42BymmUnVaIXbRhtpSbKGrzvy407vm1wQVvYqAp4t0WAqa5rj4IQy0ZlDHhTUslRqaAEZItD5GY7ot7XLjJbJdYAekT0SqInJNV5vr-HQYPqsxn2MQsHyngBWsJxB0VkJ-D8IWSEwg2lBY_2tbTYXcHkHg9_Gb4P5-HeaUrsBO1e7O7HuK84zri0ttkc5JmGHW0M2qZTw4OWwRNgSLH_Xv31CPAgOm3WT4h5uNBk")'}}></div>
+              <h2 className="text-[#111518] text-base font-bold leading-tight">I don't know</h2>
+            </div>
+           </Link>
          </div>
       </div>
     </div>
