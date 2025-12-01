@@ -1,15 +1,45 @@
-# Signora 🧏‍♀️📚
+📘 Signora – Learn Sign Language the Smart Way
 
-**Signora** is a socially driven web application designed to help users learn sign language through interactive visuals, gestures, and animations — inspired by platforms like Duolingo. The goal is to bridge communication gaps between hearing and non-hearing individuals by promoting accessible, engaging, and inclusive learning.
+A modern, interactive web application designed to help users learn sign language through visuals, gestures, animations, and simple gamified lessons — inspired by platforms like Duolingo.
 
----
+🌟 Features
+✔ Interactive Learning
 
-## 🌟 Project Vision
+Step-by-step lessons
+Visual signs, gestures, and hand movements
+Simple UI suitable for beginners
 
-To empower both the deaf and hearing communities by making sign language education:
-- **Accessible**
-- **Gamified**
-- **Multilingual**
-- **Community-focused**
+✔ Gamified Experience
 
----
+Daily goals
+Streak tracking
+XP-style progress system (optional)
+
+✔ User-Friendly Interface
+
+Clean, responsive UI
+Smooth animations
+Beginner-friendly navigation
+
+✔ Tech Stack
+
+Frontend: HTML, CSS, JavaScript
+Backend: Node.js / MongoDB (optional depending on your setup)
+
+🎯 Goals of Signora
+
+Promote inclusivity & accessibility
+Provide a beginner-friendly platform to learn sign language
+Create awareness and improve communication with the Deaf community
+
+🛠️ Future Enhancements
+
+AI-based gesture recognition
+User accounts & cloud sync
+Voice-to-sign & sign-to-text conversion
+More languages (ISL/ASL/BSL)
+Interactive quizzes with scoring
+
+Animations: CSS / Lottie / GIFs
+
+Deployment: GitHub Pages / Render / Verce
